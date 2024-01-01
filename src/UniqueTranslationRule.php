@@ -50,7 +50,7 @@ class UniqueTranslationRule
      */
     public function __construct($table, $column = null)
     {
-        $this->table = $table;
+        $this->table = $this->resolveTableName($table);
         $this->column = $column;
     }
 
